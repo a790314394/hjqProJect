@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="DTtelecomTaskProject"
+  id="myeclipse.1591760486756"
+  context-root="/DTtelecomTaskProject"
+  j2ee-spec="5.0"
+  archive="DTtelecomTaskProject.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
