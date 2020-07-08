@@ -2,6 +2,9 @@ package com.newer.task.data.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
+
 import com.newer.task.data.pojo.TbTask;
 import com.newer.task.web.util.TaskPlan;
 
@@ -9,10 +12,9 @@ import com.newer.task.web.util.TaskPlan;
 public interface ITaskDAO {
 	// 查询任务
 	public abstract List<TaskPlan> selectAllTask(String sql, Object[] prams);
-
 	// 新增任务
 	public abstract int insertTask(TbTask task);
-
+	
 	// 修改任务
 	public abstract int updateTask(TbTask task);
 
@@ -26,7 +28,7 @@ public interface ITaskDAO {
 	public abstract List<TaskPlan> selectallTaskandPlan(int id);
 
 	public abstract TbTask selectTask(int id);
-	
+
 	public abstract boolean updatetask(TbTask tk);
 
 	public abstract int selectallcountTaskandPlan(Integer id);
