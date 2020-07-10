@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- setting标签MyBatis框架全局配置 -->
+	<settings>
+		<!-- 开启延迟加载 -->
+		<setting name="lazyLoadingEnabled" value="true" />
+
+		<setting name="aggressiveLazyLoading" value="false" />
+
+		<setting name="lazyLoadTriggerMethods" value="" />
+	</settings>
+	<!-- 直接使用JDBC连接参数 -->
+	<environments default="development">
+		<environment id="development">
+			<!-- 新增、修改和删除必须使用Sqlsession.commit()方法提交 -->
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" />
+				<property name="username" value="hejinquan" />
+				<property name="password" value="123456" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<!--映射DAO类配置文件 -->
+		<!-- 自表一对多树形结构查询 -->
+		<!-- <mapper resource="demo/EmpDAOMapper.xml" />
+		<mapper class="demo.ITbUsersDAO" /> -->
+	</mappers>
+</configuration>

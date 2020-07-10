@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.newer.task.data.dao.ITaskDAO">
+	<resultMap type="com.newer.task.data.pojo.TbTask" id="TaskMapper">
+		<id property="taskId" column="TASK_ID" />
+		<result property="taskName" column="TASK_NAME" />
+		<result property="beginDate" column="BEGIN_DATE" />
+		<result property="endDate" column="END_DATE" />
+		<result property="realBeginDate" column="REAL_BEGIN_DATE" />
+		<result property="realEndDate" column="REAL_END_DATE" />
+		<result property="status" column="STATUS" />
+		<result property="assignerId" column="ASSIGNER_ID" />
+		<result property="taskDesc" column="TASK_DESC" />
+		<!-- 实施人编号 -->
+		<association property="task" column="IMPLEMENTOR_ID"></association>
+
+	</resultMap>
+
+</mapper>
